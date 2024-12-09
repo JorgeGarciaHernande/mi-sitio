@@ -1,0 +1,77 @@
+.clima-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+.ciudad-usuario {
+  margin-bottom: 20px;
+}
+
+.ciudad h2 {
+  margin-bottom: 10px;
+}
+
+.temperatura {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.temp-valor {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.temp-sensacion {
+  font-size: 14px;
+  color: #777;
+}
+
+.icono img {
+  width: 80px;
+}
+
+.detalles {
+  margin-top: 20px;
+}
+
+.detalle {
+  margin-bottom: 5px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+/* Diseño horizontal para las tarjetas de clima */
+.ciudades-container {
+  display: flex;
+  flex-wrap: wrap; /* Ajusta las tarjetas en múltiples filas si es necesario */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.ciudad-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px; /* Tamaño fijo para las tarjetas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centra el contenido dentro de cada tarjeta */
+}
+
+@media (max-width: 768px) {
+  .ciudad-item {
+      width: calc(50% - 20px); /* Ocupa la mitad del contenedor en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .ciudad-item {
+      width: 100%; /* Ocupa todo el ancho del contenedor en pantallas pequeñas */
+  }
+}

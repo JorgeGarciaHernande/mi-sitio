@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte del Clima</title>
+</head>
+<body>
+<div class="clima-container">
+    <h1>Reporte del Clima</h1>
+    <p>Consulta el clima actual de tu ciudad con detalles precisos sobre la temperatura, sensación térmica, humedad y velocidad del viento.</p>
+    <div class="ciudades-container">
+      <div class="ciudad-item" *ngFor="let ciudadData of ciudades">
+        <h2>{{ ciudadData.ciudad }}</h2>
+        <div class="temperatura">
+          <span class="temp-valor">{{ ciudadData.temperatura }}°C</span> 
+          <span class="temp-sensacion">Sensación térmica: {{ ciudadData.sensacionTermica }}°C</span> 
+        </div>
+        <div class="descripcion">
+          <span>{{ ciudadData.descripcion }}</span>
+        </div>
+        <div class="icono">
+          <img [src]="ciudadData.iconoUrl" alt="Icono del clima"> 
+        </div>
+        <div class="detalles">
+          <div class="detalle">
+            <span class="label">Humedad:</span> <span class="valor">{{ ciudadData.humedad }}%</span>
+          </div>
+          <div class="detalle">
+            <span class="label">Viento:</span> <span class="valor">{{ ciudadData.viento }} km/h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
